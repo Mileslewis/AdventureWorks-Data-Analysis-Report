@@ -8,8 +8,8 @@ WITH cte AS (SELECT	storeID,
 
 SELECT storeID, 
 		total_revenue,
-		s.[Demographics].value('declare default element namespace "http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/StoreSurvey"; 
-        (/StoreSurvey/YearOpened)[1]', 'integer') AS [YearOpened],
+		2014 - s.[Demographics].value('declare default element namespace "http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/StoreSurvey"; 
+        (/StoreSurvey/YearOpened)[1]', 'integer') AS Trading_Duration,
 		s.[Demographics].value('declare default element namespace "http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/StoreSurvey"; 
         (/StoreSurvey/AnnualSales)[1]', 'money') AS [AnnualSales],
 		s.[Demographics].value('declare default element namespace "http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/StoreSurvey"; 

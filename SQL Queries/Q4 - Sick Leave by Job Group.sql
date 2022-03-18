@@ -1,4 +1,4 @@
-WITH cte AS (SELECT  CAST(isnull(OrganizationLevel,0) AS INT) AS OrganizationLevel,jobtitle,SickLeaveHours,
+WITH cte AS (SELECT  cASt(isnull(OrganizationLevel,0) AS INT) AS OrganizationLevel,jobtitle,SickLeaveHours,
 CASE	WHEN OrganizationLevel IS NULL OR OrganizationLevel = 0 THEN 'CEO'
         WHEN OrganizationLevel = 1 THEN 'Directors'
 		WHEN OrganizationLevel = 2 AND JobTitle LIKE '%Specialist%' THEN 'Specialists'
